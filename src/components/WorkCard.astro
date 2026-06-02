@@ -44,13 +44,13 @@ const { href, title, summary, tags, thumbnail } = Astro.props;
       )
     }
   </div>
-  <div class="p-6">
+  <div class="p-5 sm:p-6">
     <h3
-      class="text-lg font-semibold tracking-tight text-[color:var(--color-fg)] group-hover:text-[color:var(--color-accent-dark)] transition-colors"
+      class="text-base sm:text-lg font-semibold tracking-tight text-[color:var(--color-fg)] group-hover:text-[color:var(--color-accent-dark)] transition-colors"
     >
       {title}
     </h3>
-    <p class="mt-2 text-sm text-[color:var(--color-fg-soft)] leading-relaxed">
+    <p class="mt-2 text-xs sm:text-sm text-[color:var(--color-fg-soft)] leading-relaxed">
       {summary}
     </p>
     {
