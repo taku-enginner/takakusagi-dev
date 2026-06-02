@@ -12,7 +12,7 @@ interface Props {
 const {
   title = 'takakusagi.dev',
   description = 'takakusagi のポートフォリオ。Web アプリケーションを中心としたものづくりの記録と、関心領域についての発信をしています。',
-  ogImage = '/og-image.png',
+  ogImage = '/images/works/irasuto1_icon.png',
 } = Astro.props;
 
 const fullTitle = title === 'takakusagi.dev' ? title : `${title} | takakusagi.dev`;
@@ -29,7 +29,8 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/images/works/irasuto1_icon.png" />
+    <link rel="apple-touch-icon" href="/images/works/irasuto1_icon.png" />
 
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
@@ -38,7 +39,8 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:site_name" content="takakusagi.dev" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

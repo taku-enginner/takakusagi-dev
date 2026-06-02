@@ -3,24 +3,33 @@ import Section from './Section.astro';
 ---
 
 <Section id="about" eyebrow="About" title="自己紹介">
-  <div class="prose-custom space-y-5 text-[color:var(--color-fg-soft)]">
-    <p>
-      はじめまして、Web エンジニアの <strong class="text-[color:var(--color-fg)]">たか</strong> です。
-      Web アプリケーションを中心に、自分や身近な人の困りごとを解く制作を続けています。
-    </p>
-    <p>
-      普段は <strong class="text-[color:var(--color-fg)]">Nuxt / Rails / Python</strong> あたりで手を動かすことが多く、フロントから API、データベース、運用までひと通り自分で組み立てるスタイルです。
-      学んだことを次の作品で試すサイクルを大事にしていて、このサイトもそうした記録のような場所として育てていく予定です。
-    </p>
-    <p>
-      <strong class="text-[color:var(--color-fg)]">Web エンジニアリング × 障害児福祉</strong> をテーマに、X (
-      <a
-        href="https://x.com/takakusagi_dev"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-[color:var(--color-accent-dark)] underline underline-offset-2 decoration-[color:var(--color-accent)]/40 hover:decoration-[color:var(--color-accent)]"
-        >@takakusagi_dev</a
-      >) でも少しずつ発信していく予定です。お仕事やご相談は、ページ末尾の連絡先からお気軽にどうぞ。
-    </p>
+  <div class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+    <img
+      src="/images/works/irasuto1_icon.png"
+      alt="たかのアバター"
+      width="128"
+      height="128"
+      class="w-28 h-28 sm:w-32 sm:h-32 rounded-full ring-2 ring-[color:var(--color-accent-soft)] shadow-sm shrink-0"
+    />
+    <div class="prose-custom space-y-5 text-[color:var(--color-fg-soft)] flex-1">
+      <p>
+        はじめまして、Web エンジニアの <strong class="text-[color:var(--color-fg)]">たか</strong> です。
+        Web アプリケーションを中心に、自分や身近な人の困りごとを解く制作を続けています。
+      </p>
+      <p>
+        普段は <strong class="text-[color:var(--color-fg)]">Nuxt / Rails / Python</strong> あたりで手を動かすことが多く、フロントから API、データベース、運用までひと通り自分で組み立てるスタイルです。
+        学んだことを次の作品で試すサイクルを大事にしていて、このサイトもそうした記録のような場所として育てていく予定です。
+      </p>
+      <p>
+        <strong class="text-[color:var(--color-fg)]">Web エンジニアリング × 障害児福祉</strong> をテーマに、X (
+        <a
+          href="https://x.com/takakusagi_dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[color:var(--color-accent-dark)] underline underline-offset-2 decoration-[color:var(--color-accent)]/40 hover:decoration-[color:var(--color-accent)]"
+          >@takakusagi_dev</a
+        >) でも少しずつ発信していく予定です。お仕事やご相談は、ページ末尾の連絡先からお気軽にどうぞ。
+      </p>
+    </div>
   </div>
 </Section>
