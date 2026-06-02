@@ -10,7 +10,7 @@ techStack:
   - MySQL
   - Docker
 liveUrl: https://kibunlog.takakusagi.dev
-thumbnail: /images/works/kibunlog.png
+thumbnail: /images/works/kibunlog.webp
 order: 1
 publishedAt: "2025"
 ---

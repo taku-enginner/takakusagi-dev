@@ -12,7 +12,7 @@ interface Props {
 const {
   title = 'takakusagi.dev',
   description = 'takakusagi のポートフォリオ。Web アプリケーションを中心としたものづくりの記録と、関心領域についての発信をしています。',
-  ogImage = '/images/works/irasuto1_icon.png',
+  ogImage = '/images/works/irasuto1_icon.webp',
 } = Astro.props;
 
 const fullTitle = title === 'takakusagi.dev' ? title : `${title} | takakusagi.dev`;
@@ -29,8 +29,8 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/png" href="/images/works/irasuto1_icon.png" />
-    <link rel="apple-touch-icon" href="/images/works/irasuto1_icon.png" />
+    <link rel="icon" type="image/png" href="/images/works/irasuto1_icon.webp" />
+    <link rel="apple-touch-icon" href="/images/works/irasuto1_icon.webp" />
 
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
