@@ -110,6 +110,19 @@ const { Content } = await render(work);
         }
       </header>
 
+      {
+        work.data.thumbnail && (
+          <figure class="mb-12 rounded-2xl bg-gradient-to-br from-[color:var(--color-accent-soft)]/60 to-[color:var(--color-accent-soft)]/20 border border-[color:var(--color-border)] p-8 md:p-12 flex items-center justify-center">
+            <img
+              src={work.data.thumbnail}
+              alt={`${work.data.title} のスクリーンショット`}
+              class="max-h-[520px] w-auto object-contain drop-shadow-lg rounded-lg"
+              loading="lazy"
+            />
+          </figure>
+        )
+      }
+
       <div class="prose-custom prose-takakusagi">
         <Content />
       </div>
