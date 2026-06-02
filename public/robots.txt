@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://takakusagi.dev/sitemap-index.xml
