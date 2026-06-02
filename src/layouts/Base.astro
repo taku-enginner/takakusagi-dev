@@ -55,5 +55,12 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
       <slot />
     </main>
     <Footer />
+
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "82df5e584e684f3b8b539a8128d0bfaa"}'></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>
