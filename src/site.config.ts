@@ -11,7 +11,7 @@ export const siteConfig = {
     github: 'https://github.com/taku-enginner',
     email: 'mailto:taku.enginner@gmail.com',
     x: 'https://x.com/takakusagi_dev',
-    note: '',
+    note: 'https://note.com/taka_11926',
     qiita: 'https://qiita.com/taku-enginner',
   },
 } as const;
