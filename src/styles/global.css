@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@source "../content/**/*.md";
+
 @theme {
   --color-bg: #FAF9F5;
   --color-fg: #2E2E2E;

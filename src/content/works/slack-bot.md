@@ -9,6 +9,7 @@ techStack:
   - Anthropic SDK
   - Slack Bolt
   - systemd
+thumbnail: /images/works/form.png
 order: 2
 publishedAt: "2025"
 ---
@@ -17,6 +18,19 @@ publishedAt: "2025"
 
 Slack 上で Claude と対話しながら、自分の日常タスクを進めるための bot です。
 日々の記録 (kibunlog 連携)、ちょっとした調べもの、長めの相談まで、Slack のチャンネルから自然に依頼できるようにしています。
+
+## 動作の様子
+
+Slack のチャンネルでメンションして話しかけると、状況に応じてフォーム入力や自由文での会話ができます。
+
+<div class="not-prose grid gap-4 sm:grid-cols-2 my-6">
+  <figure class="rounded-xl bg-[color:var(--color-accent-soft)]/40 border border-[color:var(--color-border)] p-3 flex items-center justify-center">
+    <img src="/images/works/form.png" alt="Slack 上のフォーム入力 UI" loading="lazy" class="rounded-md max-h-72 w-auto" />
+  </figure>
+  <figure class="rounded-xl bg-[color:var(--color-accent-soft)]/40 border border-[color:var(--color-border)] p-3 flex items-center justify-center">
+    <img src="/images/works/input.png" alt="bot とのやり取りの様子" loading="lazy" class="rounded-md max-h-72 w-auto" />
+  </figure>
+</div>
 
 ## なぜ作ったか
 
