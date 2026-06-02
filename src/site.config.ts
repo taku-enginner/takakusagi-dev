@@ -12,6 +12,7 @@ export const siteConfig = {
     email: 'mailto:taku.enginner@gmail.com',
     x: 'https://x.com/takakusagi_dev',
     note: '',
+    qiita: 'https://qiita.com/taku-enginner',
   },
 } as const;
 

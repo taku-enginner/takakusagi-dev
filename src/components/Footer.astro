@@ -4,6 +4,7 @@ import GitHubIcon from './icons/GitHubIcon.astro';
 import MailIcon from './icons/MailIcon.astro';
 import XIcon from './icons/XIcon.astro';
 import NoteIcon from './icons/NoteIcon.astro';
+import QiitaIcon from './icons/QiitaIcon.astro';
 
 const year = 2026;
 
@@ -12,6 +13,7 @@ const socialLinks = [
   { href: siteConfig.links.email, label: 'Email', Icon: MailIcon },
   { href: siteConfig.links.x, label: 'X', Icon: XIcon },
   { href: siteConfig.links.note, label: 'note', Icon: NoteIcon },
+  { href: siteConfig.links.qiita, label: 'Qiita', Icon: QiitaIcon },
 ].filter((item) => item.href);
 ---
 
