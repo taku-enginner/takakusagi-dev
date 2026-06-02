@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Section from './Section.astro';
+import WorkCard from './WorkCard.astro';
+
+const works = (await getCollection('works')).sort(
+  (a, b) => (a.data.order ?? 999) - (b.data.order ?? 999),
+);
+---
+
+<Section id="works" eyebrow="Works" title="作品">
+  <p class="text-[color:var(--color-fg-soft)] mb-8 max-w-xl">
+    自分の生活や身近な人の困りごとを起点に、手を動かしてきた作品です。
+  </p>
+  <ul class="grid gap-6 md:grid-cols-2">
+    {
+      works.map((work) => (
+        <li>
+          <WorkCard
+            href={`/works/${work.id}/`}
+            title={work.data.title}
+            summary={work.data.summary}
+            tags={work.data.tags}
+            thumbnail={work.data.thumbnail}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</Section>

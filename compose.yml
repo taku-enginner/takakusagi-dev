@@ -1,0 +1,7 @@
+services:
+  takakusagi-dev:
+    build: .
+    container_name: takakusagi-dev
+    ports:
+      - "127.0.0.1:8082:80"
+    restart: unless-stopped

@@ -1,0 +1,44 @@
+---
+import { siteConfig } from '../site.config';
+import GitHubIcon from './icons/GitHubIcon.astro';
+import MailIcon from './icons/MailIcon.astro';
+import XIcon from './icons/XIcon.astro';
+import NoteIcon from './icons/NoteIcon.astro';
+
+const year = 2026;
+
+const socialLinks = [
+  { href: siteConfig.links.github, label: 'GitHub', Icon: GitHubIcon },
+  { href: siteConfig.links.email, label: 'Email', Icon: MailIcon },
+  { href: siteConfig.links.x, label: 'X', Icon: XIcon },
+  { href: siteConfig.links.note, label: 'note', Icon: NoteIcon },
+].filter((item) => item.href);
+---
+
+<footer class="border-t border-[color:var(--color-border)] mt-20">
+  <div
+    class="mx-auto max-w-[var(--container-3xl)] px-6 md:px-8 py-10 flex flex-col md:flex-row items-center md:justify-between gap-6"
+  >
+    <p class="text-sm text-[color:var(--color-muted)]">
+      © {year} takakusagi
+    </p>
+    {
+      socialLinks.length > 0 && (
+        <ul class="flex items-center gap-5">
+          {socialLinks.map(({ href, label, Icon }) => (
+            <li>
+              <a
+                href={href}
+                aria-label={label}
+                class="inline-flex items-center justify-center w-9 h-9 rounded-full text-[color:var(--color-fg-soft)] hover:text-[color:var(--color-accent-dark)] hover:bg-[color:var(--color-accent-soft)] transition-colors"
+                {...href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
+              >
+                <Icon class="w-5 h-5" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</footer>

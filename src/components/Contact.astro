@@ -1,0 +1,46 @@
+---
+import Section from './Section.astro';
+import { siteConfig } from '../site.config';
+import GitHubIcon from './icons/GitHubIcon.astro';
+import MailIcon from './icons/MailIcon.astro';
+import XIcon from './icons/XIcon.astro';
+import NoteIcon from './icons/NoteIcon.astro';
+
+const contactLinks = [
+  { href: siteConfig.links.github, label: 'GitHub', value: '@taku-enginner', Icon: GitHubIcon },
+  { href: siteConfig.links.email, label: 'Email', value: siteConfig.author.email, Icon: MailIcon },
+  { href: siteConfig.links.x, label: 'X', value: '', Icon: XIcon },
+  { href: siteConfig.links.note, label: 'note', value: '', Icon: NoteIcon },
+].filter((item) => item.href);
+---
+
+<Section id="contact" eyebrow="Contact" title="連絡先">
+  <p class="text-[color:var(--color-fg-soft)] mb-8 max-w-xl">
+    お仕事のご相談、感想、雑談、なんでもお気軽にどうぞ。
+  </p>
+  <ul class="grid gap-3 sm:grid-cols-2">
+    {
+      contactLinks.map(({ href, label, value, Icon }) => (
+        <li>
+          <a
+            href={href}
+            class="group flex items-center gap-4 p-4 rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)] hover:border-[color:var(--color-accent)] hover:bg-[color:var(--color-accent-soft)]/40 transition-colors"
+            {...href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
+          >
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[color:var(--color-accent-soft)] text-[color:var(--color-accent-dark)] group-hover:bg-[color:var(--color-surface)] transition-colors">
+              <Icon class="w-5 h-5" />
+            </span>
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs text-[color:var(--color-muted)] uppercase tracking-wider">
+                {label}
+              </span>
+              <span class="block text-sm text-[color:var(--color-fg)] truncate">
+                {value || label}
+              </span>
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
