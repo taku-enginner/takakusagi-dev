@@ -14,6 +14,12 @@ export const siteConfig = {
     note: 'https://note.com/taka_11926',
     qiita: 'https://qiita.com/taku-enginner',
   },
+  sites: {
+    fukushiDxLab: {
+      url: 'https://fukushi-dx.takakusagi.dev',
+      label: '福祉DX研究所',
+    },
+  },
 } as const;
 
 export type SiteConfig = typeof siteConfig;

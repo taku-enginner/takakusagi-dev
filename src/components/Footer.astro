@@ -21,9 +21,19 @@ const socialLinks = [
   <div
     class="mx-auto max-w-[var(--container-3xl)] px-6 md:px-8 py-10 flex flex-col md:flex-row items-center md:justify-between gap-6"
   >
-    <p class="text-sm text-[color:var(--color-muted)]">
-      © {year} takakusagi
-    </p>
+    <div class="flex flex-col items-center md:items-start gap-2">
+      <p class="text-sm text-[color:var(--color-muted)]">
+        © {year} takakusagi
+      </p>
+      <a
+        href={siteConfig.sites.fukushiDxLab.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-xs text-[color:var(--color-fg-soft)] hover:text-[color:var(--color-accent-dark)] transition-colors"
+      >
+        もうひとつのサイト → {siteConfig.sites.fukushiDxLab.label}
+      </a>
+    </div>
     {
       socialLinks.length > 0 && (
         <ul class="flex items-center gap-5">
